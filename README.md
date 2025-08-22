@@ -65,3 +65,17 @@ WHERE
     quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 ```
 
+###3. Data Analysis & Findings
+The following SQL queries were developed to answer specific business questions and provide actionable insights into the retail sales data.
+
+Profitability Analysis: Calculated the total profit and gross margin percentage for each category to identify which products are most profitable.
+
+Cross-Category Purchase Analysis: Identified customers who have purchased from at least two different product categories, an indicator of customer loyalty and diversification.
+
+Sales Performance Analysis: Used a window function to determine the best-selling month for each year, revealing seasonal sales trends.
+
+Top Customer Identification: Identified the top 5 most valuable customers based on their highest total sales, a key metric for customer loyalty programs.
+
+Customer Demographics: Explored customer purchasing habits by analyzing the average age of customers in a specific category and counting transactions by gender across all categories.
+
+Targeted Sales Queries: Filtered sales data to find specific transactions, such as all sales on a particular date or those for a specific product category with a high quantity sold.
