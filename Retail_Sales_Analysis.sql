@@ -2,6 +2,7 @@
 
 
 -- Data cleaning --
+
 -- Identify null values--
 select
     *
@@ -45,6 +46,7 @@ from
     retail_sales;
 
 -- Data anlysis & Business problems --
+
 -- Q1. Retrive all transactions where category is 'clothing' and quantity sold is more than 3 in the month of november 2022 --
 SELECT
     *
@@ -120,6 +122,7 @@ group by
     customer_id
 order by
     total_sales desc
+
     -- Q7. Find the number of unique customer who purchased the item from each category. --
 select
     category,
@@ -155,5 +158,26 @@ HAVING
     COUNT(DISTINCT category) >= 2
 ORDER BY
     distinct_categories_purchased DESC;
+
+-- Q10. Find How is revenue trending month by month, and what is the Yera Over Year growth? --
+  WITH monthly_sales AS (
+    SELECT 
+        YEAR(sale_date) AS yr,
+        MONTH(sale_date) AS mn,
+        SUM(total_sale) AS revenue
+    FROM dbo.retail_sales
+    GROUP BY YEAR(sale_date), MONTH(sale_date)
+)
+SELECT 
+    yr,
+    mn,
+    revenue,
+    LAG(revenue) OVER (ORDER BY yr, mn) AS prev_month,
+    ROUND(
+        100.0 * (revenue - LAG(revenue) OVER (ORDER BY yr, mn)) 
+        / NULLIF(LAG(revenue) OVER (ORDER BY yr, mn),0), 2
+    ) AS pct_change
+FROM monthly_sales
+ORDER BY yr, mn;
 
 -- End of project --
