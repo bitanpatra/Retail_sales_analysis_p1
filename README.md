@@ -5,7 +5,7 @@
 **Project Title**: Retail Sales Analysis  
 **Level**: Beginner  
 **Database**: `retail_sales`  
-**Author**: [Bitan Patra]
+**Author**: Bitan Patra
 
 This project demonstrates fundamental SQL skills through comprehensive analysis of retail sales data. The project covers data cleaning, exploratory data analysis, and business intelligence queries essential for data analyst roles, showcasing practical SQL problem-solving capabilities used in real-world business scenarios.
 
@@ -202,9 +202,9 @@ This project demonstrates progressive SQL skill development through:
 
 ## Connect With Me
 
-- **GitHub**: [https://github.com/bitanpatra]
-- **LinkedIn**: [www.linkedin.com/in/bitan-patra-data-analyst]  
-- **Email**: [bitanpatra09323@gmail.com]
+- **GitHub**: https://github.com/bitanpatra
+- **LinkedIn**: www.linkedin.com/in/bitan-patra-data-analyst  
+- **Email**: bitanpatra09323@gmail.com
 
 ---
 
